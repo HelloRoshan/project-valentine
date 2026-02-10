@@ -1,0 +1,123 @@
+.envelope-wrapper {
+    width: 700px;
+    height: 350px;
+    perspective: 900px;
+    cursor: pointer;
+  }
+  
+  .envelope {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Letter */
+  .letter {
+    position: absolute;
+    width: 90%;
+    height: 110%;
+    background: #fff;
+    top: 5%;
+    left: 5%;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transform: translateY(25px);
+    transition: transform 0.6s ease;
+    z-index: 1;
+  }
+  
+  /* Envelope front */
+  .front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f87171;
+    border-radius: 6px;
+    z-index: 3;
+  }
+  
+  /* Envelope flap */
+  .top {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ef4444;
+    clip-path: polygon(0 0, 100% 0, 50% 55%);
+    transform-origin: top;
+    transition: transform 0.6s ease;
+    z-index: 4;
+  }
+  
+  /* Open state */
+  .envelope.open .top {
+    transform: rotateX(180deg);
+  }
+  
+  .envelope.open .letter {
+    transform: translateY(-45px);
+    flex-direction: column;
+  }
+  
+  /* ❤️ Heart Seal */
+  .heart {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    z-index: 5;
+    display: flex;
+  }
+  
+  .heart span {
+    transition: all 0.4s ease;
+  }
+  
+  /* Breaking animation */
+  .heart.break .left {
+    transform: translateX(-14px) rotate(-20deg);
+    opacity: 0;
+  }
+  
+  .heart.break .right {
+    transform: translateX(14px) rotate(20deg);
+    opacity: 0;
+  }
+  .letter {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background: #fff;
+    top: 5%;
+    left: 5%;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+    z-index: 1;
+    flex-direction: column;
+  }
+  
+  .letter.show {
+    opacity: 1;
+    transform: translateY(-45px);
+    z-index: 5;
+  }
+  
+  .letter h4 {
+    margin: 0;
+    color: #ef4444;
+    font-size: 2.5rem;
+  }
+  
+  .letter p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+  }
+  

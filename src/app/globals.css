@@ -1,26 +1,34 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body
+,.container,
+main {
+    background-color: pink;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+progress {
+    background-color: pink;
+    accent-color: orangered;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+button{
+    padding: 0px 1rem;
+    color: #fff;
+    background-color: rgb(219, 94, 115);
+    border: rgb(206, 47, 90) 2px solid;
+    border-radius: 4px;
+    font-weight: 900;
+    font-size: 24px;
+    margin: 4px;
+    /* aquamarine */
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.valentine-question {
+    color: #8B0000;
+    font-size: 5rem;
+}
+button {
+    cursor: pointer;
+    min-width: 150px;
+    height: 50px;
 }
