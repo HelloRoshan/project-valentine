@@ -1,6 +1,6 @@
 'use client'
 
-export default function Heart({ progress }) {
+export default function Heart({ progress }: { progress: number }) {
     return (
       <svg
         width="50"
