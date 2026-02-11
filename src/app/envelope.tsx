@@ -3,11 +3,11 @@
 import { useState } from "react";
 import "./envelope.css";
 
-export default function Envelope() {
+export default function Envelope({handleHappiness}: {handleHappiness:any}) {
   const [open, setOpen] = useState(false);
   const [sealBroken, setSealBroken] = useState(false);
   const handleHover = (ev:any) => {
-    const maxWidth = 200;
+    const maxWidth = 500;
     const maxHeight = 300;
     ev.target.style.left = Math.floor(Math.random()*(maxWidth+1))+'px';
     ev.target.style.bottom = Math.floor(Math.random()*(maxHeight+1))+'px';
@@ -22,10 +22,6 @@ export default function Envelope() {
     }
   };
 
-  const handleHappiness = (ev:any) => {
-    ev.stopPropagation();
-     alert(1)
-  }
 
   return (
     <div className="envelope-wrapper" onClick={handleClick}>
@@ -49,7 +45,6 @@ export default function Envelope() {
         {!open && (
           <div className={`heart ${sealBroken ? "break" : ""}`}>
             <span className="left">❤️</span>
-            <span className="right">❤️</span>
           </div>
         )}
 
