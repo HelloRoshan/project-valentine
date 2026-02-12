@@ -30,7 +30,7 @@ export default function Home() {
     });
   }, []);
 
-  const options = useMemo(
+  const options: Record<string, any> = useMemo(
     () => ({
       "fullScreen": {
         "zIndex": 1
