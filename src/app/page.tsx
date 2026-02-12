@@ -68,6 +68,10 @@ export default function Home() {
             }
           }
         },
+        "angle": "randomInRange(55, 125)",
+        "spread": "randomInRange(50, 70)",
+        "particleCount": "randomInRange(50, 100)",
+        "origin": { y: 0.6 },
         "opacity": {
           "value": {
             "min": 0,
@@ -162,13 +166,13 @@ export default function Home() {
       },
       "emitters": {
         "life": {
-          "count": 0,
-          "duration": 0.1,
-          "delay": 0.4
+          "count": 10,
+          "duration": 0.2,
+          "delay": 0.5
         },
         "rate": {
           "delay": 0.1,
-          "quantity": 150
+          "quantity": 250
         },
         "size": {
           "width": 0,
