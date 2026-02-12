@@ -5,7 +5,7 @@ import LoadingButton from "./loading";
 import Envelope from "./envelope";
 import { useEffect, useMemo } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
+// import { loadSlim } from "@tsparticles/slim";
 import { loadAll } from "@tsparticles/all"
 
 
@@ -29,10 +29,6 @@ export default function Home() {
       // setInit(true);
     });
   }, []);
-
-  const particlesLoaded = (container: any) => {
-    console.log(container);
-  };
 
   const options = useMemo(
     () => ({
@@ -191,7 +187,6 @@ export default function Home() {
       <div style={{position: 'absolute'}}>
         <Particles
         id="tsparticles"
-        particlesLoaded={particlesLoaded}
         options={options}
       />
       </div>
