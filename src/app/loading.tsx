@@ -7,7 +7,7 @@ export default function LoadingButton() {
   const [progress, setProgress] = useState(0);
   const [loading, setLoading] = useState(false);
   const [hideLoadButton, hideloadscreen] = useState(false);
-  const styles = {
+  const styles:  Record<string, React.CSSProperties> = {
     button: {
       position: "relative",
       overflow: "hidden",
