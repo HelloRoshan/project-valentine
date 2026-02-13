@@ -3,9 +3,9 @@
 export default function Heart({ progress }: { progress: number }) {
     return (
       <svg
-        width="50"
-        height="300"
-        viewBox="0 0 50 10"
+        width="1000"
+        height="1000"
+        viewBox="-38 -12 108 107"
         style={{ display: "inline" }}
       >
         {/* Outline */}
@@ -14,7 +14,7 @@ export default function Heart({ progress }: { progress: number }) {
              C3.8,0,0,3.8,0,8.4c0,9.4,16,21.2,16,21.2s16-11.8,16-21.2
              C32,3.8,28.2,0,23.6,0z"
           fill="none"
-          stroke="#ef4444"
+          stroke="#ff746c"
           strokeWidth="2"
         />
   
@@ -32,7 +32,7 @@ export default function Heart({ progress }: { progress: number }) {
           y={`${29.6 - (29.6 * progress) / 100}`}
           width="32"
           height={(29.6 * progress) / 100}
-          fill="#ef4444"
+          fill="#ff746c"
           clipPath="url(#heartClip)"
           style={{ transition: "all 0.3s ease" }}
         />

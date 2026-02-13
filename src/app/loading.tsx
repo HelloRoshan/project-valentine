@@ -13,13 +13,15 @@ export default function LoadingButton() {
       overflow: "hidden",
       padding: "12px 24px",
       borderRadius: "8px",
-      border: "none",
-      background: "#ef4444",
+      // border: "1px solid white",
+      border: 'none',
+      background: "#ff746c",
       color: "#fff",
       fontSize: "16px",
       cursor: "pointer",
       minWidth: "200px",
       top:'30%',
+      // boxShadow: '2px 2px 8px white'
     },
     text: {
       position: "relative",
@@ -65,7 +67,7 @@ export default function LoadingButton() {
 { !hideLoadButton &&
             <div style={{height: '100%',
                 width: '100%',
-                backgroundColor: 'pink',
+                backgroundColor: '#f5cdd4',
                 position: 'absolute',
                 zIndex: '1',
                 textAlign: 'center'}}>
@@ -92,7 +94,9 @@ export default function LoadingButton() {
             <div>
                 <Heart progress={progress} />
             </div>
-            </div>}</>
+            </div>
+            }
+            </>
     
   );
 }

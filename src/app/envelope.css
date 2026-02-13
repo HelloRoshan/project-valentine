@@ -105,6 +105,8 @@
     transition: all 0.6s ease;
     z-index: 1;
     flex-direction: column;
+    font-weight: 800;
+
   }
   
   .letter.show {

@@ -17,6 +17,7 @@ export default function Home() {
   const handleHappiness = (ev:any) => {
     ev.stopPropagation();
     setInit(true);
+    setHappinessVisibility(true);
   }
 
 
@@ -162,7 +163,7 @@ export default function Home() {
       },
       "emitters": {
         "life": {
-          "count": 10,
+          "count": 30,
           "duration": 0.2,
           "delay": 0.5
         },
@@ -183,14 +184,14 @@ export default function Home() {
   return (
     <div className="flex items-center w-full justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex min-h-screen w-full flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start" style={{position:'relative', alignItems: 'center'}}>
-      { init &&
-      <div style={{position: 'absolute'}}>
-        <Particles
-        id="tsparticles"
-        options={options}
-      />
-      </div>
-      }
+        { init &&
+        <div style={{position: 'absolute'}}>
+          <Particles
+          id="tsparticles"
+          options={options}
+        />
+        </div>
+        }
       <LoadingButton />
         { !isHappinessVisible &&
           
@@ -198,11 +199,13 @@ export default function Home() {
             <Envelope  handleHappiness={handleHappiness}/>
         </div> }       
 
-        {/* { isHappinessVisible && <div className="final-acceptance">
-          <h3>OMG WOW</h3>
-          <img src="" alt="" />
-          COnfetti and Meme
-        </div>} */}
+        { isHappinessVisible &&
+        <div className="final-acceptance">
+          <video controls autoPlay>
+            <source src="/wow.mp4" type="video/mp4" />
+          </video>
+        </div>
+        }
       </main>
     </div>
   );
